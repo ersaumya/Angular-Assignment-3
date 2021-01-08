@@ -31,16 +31,17 @@ export class CommonService {
     });
   }
 
-  handleError(error: { error: { message: any; }; status: any; message: any; }) {
-    let errorMessage = '';
-    if (error.error instanceof ErrorEvent) {
+  private handleError(err:any) {
+    let errorMessage: string;
+    if (err.error instanceof ErrorEvent) {
       // client-side error
-      errorMessage = `Error: ${error.error.message}`;
+      errorMessage = `An error occured: ${err.error.message}`;
     } else {
       // server-side error
-      errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
+      errorMessage = `Backend error code: ${err.status}\nMessage: ${err.message}`;
     }
-    window.alert(errorMessage);
+    console.error(err);
+    //window.alert(errorMessage);
     return throwError(errorMessage);
   }
 }

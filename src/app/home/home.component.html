@@ -1,4 +1,28 @@
-<mat-grid-list>
-    <mat-grid-tile>1</mat-grid-tile>
-    <mat-grid-tile>2</mat-grid-tile>
-</mat-grid-list>
+
+    <div>
+        <div class="page-content page-container">
+            <div class="padding">
+                <div class="row container d-flex">
+                    <div class="col-md-4 col-sm-12 grid-margin stretch-card" *ngFor="let cities of citiesStore">
+                        <!--weather card-->
+                        <div class="card card-weather">
+                            <div class="card-body">
+                                <div class="weather-date-location">
+                                    <h3>{{cities.city}}</h3>
+                                    <p class="text-gray"><span class="weather-date">{{cities.date}}</span></p>
+                                </div>
+                                <div class="weather-data d-flex">
+                                    <div class="mr-auto">
+                                        <h4 class="display-3">{{cities.temperature}} <span class="symbol">°</span>C</h4>
+                                        <p>sunrise ---- {{cities.sunrise}}</p>
+                                        <p>sunset ---- {{cities.sunset}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--weather card ends-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
