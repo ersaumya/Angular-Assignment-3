@@ -1,27 +1,30 @@
-# AngularAssignment6
+# AngularAssignment6- [Weather Data]
+Exercise:-
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.5.
+Please use Open Weather Data to create a single page application that has 2 sub-pages.
+1. Home page: It should display a list of 4 indian cities (you can choose the
+ones you prefer). Each city should display the city name, temperature, sunrise time
+and sunset time. Clicking on this tile should open another sub-page as explained in
+point #2 below. (Use routing)
+2. For a clicked city, it should display temperature and sea level for the next 5 days at
+9:00.
 
-## Development server
+Api:-
+
+Open Weather Data API
+To complete the proposed exercise two different kinds of APIs are needed.
+For example, to get the current weather data in London:
+http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=*********************
+
+More details here http://openweathermap.org/current
+
+It is possible to find more information here http://openweathermap.org/api
+
+## Technology used
+Angular 11.0.5
+
+## Run
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
