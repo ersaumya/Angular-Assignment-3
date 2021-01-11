@@ -9,6 +9,7 @@ import {
 import { Subscription } from 'rxjs';
 import { IAppConfig } from '../shared/utility/IAppConfig';
 import { APP_CONFIG } from '../shared/utility/AppConfig';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -23,6 +24,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   constructor(
     private commonService: CommonService,
+    private router:Router,
     @Inject(APP_CONFIG) private appConfig: IAppConfig
   ) {}
 
@@ -49,7 +51,13 @@ export class HomeComponent implements OnInit, OnDestroy {
     });
   }
 
+  getCityDetails(detail){
+    this.router.navigate(['city', detail.city]);
+  }
+
   ngOnDestroy(): void {
-    this.sub.unsubscribe();
+    if(this.sub){
+      this.sub.unsubscribe();
+    }
   }
 }

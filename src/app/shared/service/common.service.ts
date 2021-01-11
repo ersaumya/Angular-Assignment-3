@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { IAppConfig } from '../utility/IAppConfig';
 import { APP_CONFIG } from '../utility/AppConfig';
 import { Observable, throwError } from 'rxjs';
-import { tap,catchError } from 'rxjs/operators';
+import { tap, catchError, map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
@@ -31,7 +31,7 @@ export class CommonService {
     });
   }
 
-  private handleError(err:any) {
+  private handleError(err: any) {
     let errorMessage: string;
     if (err.error instanceof ErrorEvent) {
       // client-side error
