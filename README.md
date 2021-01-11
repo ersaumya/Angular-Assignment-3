@@ -14,7 +14,7 @@ Api:-
 Open Weather Data API
 To complete the proposed exercise two different kinds of APIs are needed.
 For example, to get the current weather data in London:
-http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=*********************
+http://api.openweathermap.org/data/2.5/weather?q=Odisha&appid=*********************
 
 More details here http://openweathermap.org/current
 
