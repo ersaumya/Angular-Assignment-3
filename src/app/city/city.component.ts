@@ -11,7 +11,7 @@ import { IAppConfig } from '../shared/utility/IAppConfig';
   styleUrls: ['./city.component.css'],
 })
 export class CityComponent implements OnInit,OnDestroy {
-  
+
   cityName: string;
   temperatureStore = [];
   sub: Subscription | any;
@@ -22,7 +22,7 @@ export class CityComponent implements OnInit,OnDestroy {
     private route: ActivatedRoute,
     @Inject(APP_CONFIG) private appConfig: IAppConfig
   ) {
-    this.cityName = this.route.snapshot.paramMap.get('city');
+    this.cityName = this.route.snapshot.paramMap.get('detail');
   }
 
   ngOnInit(): void {

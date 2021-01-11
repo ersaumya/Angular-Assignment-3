@@ -1,1 +1,31 @@
-<p>city works!</p>
+<div class="container">
+    <div class="row justify-content-center">
+        <h1>{{cityName}} next 5 day temprature</h1>
+    </div>
+
+    <div class="page-content page-container">
+        <div class="padding">
+            <div class="row mb-2">
+                <button type="button" class="btn btn-success" (click)="navigateBack()">Go Back</button>
+            </div>
+            <div class="row container d-flex">
+                <div class="col-md-4 col-sm-12 grid-margin stretch-card" *ngFor="let data of temperatureStore">
+                    <!--weather card-->
+                    <div class="card card-weather">
+                        <div class="card-body">
+                            <div class="weather-date-location">
+                                <p class="text-gray"><span class="weather-date">{{data.date}}</span></p>
+                            </div>
+                            <div class="weather-data d-flex">
+                                <div class="mr-auto">
+                                    <h4 class="display-3">{{data.temp}} <span class="symbol">°</span>C</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--weather card ends-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
